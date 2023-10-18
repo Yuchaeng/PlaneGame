@@ -61,6 +61,11 @@ public class Player : MonoBehaviour
 
         scoreNum.text = score.ToString();
 
+        if (playerHp >= playerMaxHp)
+        {
+            playerHp = 100;
+        }
+
     }
 
     public virtual void FixedUpdate()
