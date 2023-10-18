@@ -26,4 +26,12 @@ Unity를 활용한 2D 비행기 슈팅 게임
 
 ## 💜 데모 영상
 
+ <img width="25%" src="https://github.com/Yuchaeng/PlaneGame/assets/69115427/fe457e35-738b-45d2-ad9f-33bdce7ba70a.gif"/>
  
+🔼 레벨1 플레이
+
+
+<img width="25%" src="https://github.com/Yuchaeng/PlaneGame/assets/69115427/9961db1c-b48f-4c21-8f50-45135fbda399.gif"/>
+
+🔼 레벨1 보스
+
