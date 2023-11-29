@@ -26,6 +26,8 @@ public class SecondStageControl : MonoBehaviour
 
     public Text totalScore;
 
+    float scoreOfStage1;
+
 
     private void Start()
     {
@@ -37,7 +39,8 @@ public class SecondStageControl : MonoBehaviour
         playercs.playerHpSlider = playerHpSlider;
         playercs.playerHpObj = playerHpObj;
         playercs.scoreNum = scoreNum;
-        playercs.score = PlayerPrefs.GetFloat("scoreOfStage1");
+        scoreOfStage1 = PlayerPrefs.GetFloat("scoreOfStage1");
+        playercs.score = scoreOfStage1;
 
         camCS = camObj.GetComponent<MoveCamera>();
         camCS.target = playerInfo;
@@ -48,7 +51,7 @@ public class SecondStageControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playercs.score >= 2200 && isBossSpawn)
+        if (playercs.score >= scoreOfStage1 + 1200 && isBossSpawn)
         {
             SpawnBossSecond();
         }
@@ -63,6 +66,8 @@ public class SecondStageControl : MonoBehaviour
                 gameWinObj.SetActive(true);
               
                 totalScore.text = playercs.score.ToString();
+                
+                SaveData.instance.Rank(playercs.score);
                 Time.timeScale = 0;
             }
         }
